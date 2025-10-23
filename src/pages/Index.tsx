@@ -52,7 +52,7 @@ const Index = () => {
                   <span className="text-brand-secondary font-semibold">Inteligencia Artificial</span> para 
                   <br />Educación Médica
                   <br />
-                  <span className="text-sm text-gray-400 mt-2 block">Validado por médicos • Llevamos la innovación tecnológica a la formación médica continua</span>
+                  <span className="text-sm text-gray-400 mt-2 block">Validado por médicos</span>
                 </p>
                 
                 <div className="flex gap-4 flex-wrap">
@@ -114,7 +114,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 text-center font-noto">
-                  Todo nuestro contenido es revisado y validado por médicos especialistas para garantizar precisión y relevancia clínica.
+                  Todo nuestro contenido es revisado y validado por médicos para garantizar precisión y relevancia clínica.
                 </p>
               </CardContent>
             </Card>
@@ -128,7 +128,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 text-center font-noto">
-                  Contenido en constante evolución basado en la evidencia más reciente y las mejores prácticas médicas actuales.
+                  Contenido en constante evolución basado en la evidencia más reciente.
                 </p>
               </CardContent>
             </Card>
