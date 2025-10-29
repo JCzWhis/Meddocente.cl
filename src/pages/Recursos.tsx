@@ -18,13 +18,7 @@ const Recursos = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{
-      backgroundImage: `url('/lovable-uploads/10d04f23-d0a0-46cb-a28d-c386a6598d02.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
-    }}>
+    <div className="page-background min-h-screen relative overflow-hidden">
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40"></div>
 
@@ -44,18 +38,18 @@ const Recursos = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="bg-brand-dark/60 backdrop-blur-sm rounded-2xl p-12 border border-brand-secondary/30">
             <div className="mb-8">
-              <div className="flex justify-center items-center gap-4 mb-6">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 
-                <Users className="h-12 w-12 text-brand-primary" />
-                <TrendingUp className="h-12 w-12 text-brand-secondary" />
+                <Users className="h-10 w-10 text-brand-primary sm:h-12 sm:w-12" />
+                <TrendingUp className="h-10 w-10 text-brand-secondary sm:h-12 sm:w-12" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
                 Recursos en Desarrollo
               </h2>
               
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="mb-8 grid gap-4 sm:grid-cols-2 md:gap-6">
               
               
               

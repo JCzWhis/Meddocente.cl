@@ -7,13 +7,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Podcast = () => {
-  return <div className="min-h-screen relative overflow-hidden" style={{
-    backgroundImage: `url('/lovable-uploads/10d04f23-d0a0-46cb-a28d-c386a6598d02.png')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed'
-  }}>
+  return (
+    <div className="page-background min-h-screen relative overflow-hidden">
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/50"></div>
 
@@ -21,13 +16,13 @@ const Podcast = () => {
       <Header currentPage="podcast" />
 
       {/* Hero Section */}
-      <section className="py-16 px-4 relative z-10">
+      <section className="relative z-10 px-4 py-14">
         <div className="container mx-auto text-center max-w-4xl">
-          <Headphones className="h-16 w-16 text-brand-secondary mx-auto mb-6" />
-          <h1 className="text-4xl font-inter font-bold text-white mb-6">
+          <Headphones className="mx-auto mb-6 h-12 w-12 text-brand-secondary sm:h-16 sm:w-16" />
+          <h1 className="mb-6 text-3xl font-inter font-bold text-white sm:text-4xl">
             Podcasts Médicos con IA
           </h1>
-          <p className="text-xl text-gray-300 mb-8 font-noto">
+          <p className="mb-8 text-base text-gray-300 font-noto sm:text-lg md:text-xl">
             Contenido especializado generado con inteligencia artificial y validado por médicos expertos. 
             Aprende mientras conduces, haces ejercicio o en tu tiempo libre.
           </p>
@@ -35,9 +30,9 @@ const Podcast = () => {
       </section>
 
       {/* Podcasts Grid */}
-      <section className="py-8 px-4 relative z-10">
+      <section className="relative z-10 px-4 py-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid gap-8 lg:grid-cols-2">
             
             {/* Reum-AI Podcast */}
               <Card className="bg-brand-dark/80 border-brand-secondary/30 shadow-xl backdrop-blur-sm hover:bg-brand-dark/90 transition-all">
@@ -159,23 +154,23 @@ const Podcast = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-brand-dark/70 backdrop-blur-sm relative z-10">
+      <section className="relative z-10 bg-brand-dark/70 py-14 backdrop-blur-sm">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-inter font-bold text-white mb-6">
+          <h2 className="mb-6 text-2xl font-inter font-bold text-white sm:text-3xl">
             ¿Quieres más contenido como este?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-noto">
+          <p className="mb-8 max-w-2xl mx-auto text-base font-noto text-gray-300 sm:text-lg md:text-xl">
             Suscríbete a nuestros podcasts y mantente actualizado con los últimos avances 
             en medicina basada en evidencia.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
             <Link to="/apoyanos">
-              <Button size="lg" className="bg-brand-secondary hover:bg-brand-primary font-noto">
+              <Button size="lg" className="w-full bg-brand-secondary hover:bg-brand-primary font-noto sm:w-auto">
                 Apoyar Proyecto
               </Button>
             </Link>
             <Link to="/recursos">
-              <Button variant="outline" size="lg" className="border-brand-secondary text-brand-secondary hover:bg-brand-secondary/10 font-noto">
+              <Button variant="outline" size="lg" className="w-full border-brand-secondary text-brand-secondary hover:bg-brand-secondary/10 font-noto sm:w-auto">
                 Ver Recursos
               </Button>
             </Link>
@@ -185,7 +180,8 @@ const Podcast = () => {
 
       {/* Footer */}
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default Podcast;

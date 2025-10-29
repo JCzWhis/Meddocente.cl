@@ -207,3 +207,17 @@
     @apply bg-brand-primary text-white;
   }
 }
+
+.page-background {
+  background-image: url("/lovable-uploads/10d04f23-d0a0-46cb-a28d-c386a6598d02.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+@media (min-width: 768px) {
+  .page-background {
+    background-attachment: fixed;
+  }
+}

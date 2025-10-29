@@ -7,24 +7,18 @@ import Footer from "@/components/Footer";
 
 const Apoyanos = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{
-      backgroundImage: `url('/lovable-uploads/10d04f23-d0a0-46cb-a28d-c386a6598d02.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
-    }}>
+    <div className="page-background min-h-screen relative overflow-hidden">
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Floating Medical Icons */}
-      <div className="absolute top-20 left-10 opacity-10 z-10">
+      <div className="pointer-events-none absolute top-20 left-10 hidden lg:block opacity-10 z-10">
         <Heart className="h-16 w-16 text-brand-secondary animate-pulse" />
       </div>
-      <div className="absolute top-40 right-20 opacity-10 z-10">
+      <div className="pointer-events-none absolute top-40 right-20 hidden lg:block opacity-10 z-10">
         <Microscope className="h-12 w-12 text-brand-primary animate-bounce" />
       </div>
-      <div className="absolute bottom-40 left-20 opacity-10 z-10">
+      <div className="pointer-events-none absolute bottom-40 left-20 hidden lg:block opacity-10 z-10">
         <Brain className="h-14 w-14 text-brand-secondary animate-pulse" />
       </div>
 
@@ -32,13 +26,13 @@ const Apoyanos = () => {
       <Header currentPage="apoyanos" />
 
       {/* Hero Section */}
-      <section className="py-16 px-4 relative z-10">
-        <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <Coffee className="h-16 w-16 text-orange-400 mx-auto mb-6" />
-          <h1 className="text-4xl font-inter font-bold text-white mb-6">
+      <section className="relative z-10 px-4 py-14">
+        <div className="container mx-auto relative z-10 max-w-4xl text-center">
+          <Coffee className="mx-auto mb-6 h-12 w-12 text-orange-400 sm:h-16 sm:w-16" />
+          <h1 className="mb-6 text-3xl font-inter font-bold text-white sm:text-4xl">
             Apoya Nuestro Proyecto
           </h1>
-          <p className="text-xl font-noto text-gray-300 mb-8">
+          <p className="mb-8 text-base font-noto text-gray-300 sm:text-lg md:text-xl">
             Si este contenido te ayuda en tu práctica médica diaria, considera invitarnos un café ☕
             Tu apoyo nos permite seguir creando contenido educativo de calidad, gratuito y accesible para toda la comunidad médica.
           </p>
@@ -48,13 +42,13 @@ const Apoyanos = () => {
       </section>
 
       {/* Support Options - Moved up */}
-      <section className="py-16 px-4 relative z-10">
+      <section className="relative z-10 px-4 py-14">
         <div className="container mx-auto max-w-4xl relative z-10">
           
           {/* Main CTA - Buy Me a Coffee */}
           <Card className="border-orange-800/30 shadow-xl mb-8 bg-brand-dark/50 backdrop-blur-sm">
             <CardContent className="text-center space-y-6 p-6">
-              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg shadow-lg font-noto" onClick={() => window.open('https://buymeacoffee.com/meddocente', '_blank')}>
+              <Button size="lg" className="w-full bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg shadow-lg font-noto sm:w-auto" onClick={() => window.open('https://buymeacoffee.com/meddocente', '_blank')}>
                 <ExternalLink className="mr-2 h-5 w-5" />
                 Apoyar en Buy Me a Coffee
               </Button>
@@ -66,7 +60,7 @@ const Apoyanos = () => {
           </Card>
 
           {/* Other ways to support */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-6 sm:grid-cols-2">
             <Card className="bg-brand-dark/50 border-brand-primary/30 shadow-lg backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-brand-primary font-inter font-bold flex items-center gap-2">
@@ -110,13 +104,13 @@ const Apoyanos = () => {
       </section>
 
       {/* Why Support Section - Moved down */}
-      <section className="py-16 px-4 relative z-10">
+      <section className="relative z-10 px-4 py-14">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl font-inter font-bold text-white text-center mb-12">
+          <h2 className="mb-12 text-center text-2xl font-inter font-bold text-white sm:text-3xl">
             ¿Por qué apoyar MedDocente-IA?
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 justify-items-center max-w-4xl mx-auto">
+          <div className="mx-auto grid max-w-4xl gap-6 justify-items-center sm:grid-cols-2">
             <Card className="bg-brand-dark/50 border-brand-primary/30 shadow-lg backdrop-blur-sm">
               <CardHeader>
                 <Target className="h-8 w-8 text-brand-primary mb-2" />
@@ -150,19 +144,19 @@ const Apoyanos = () => {
       
 
       {/* Thank You */}
-      <section className="py-16 bg-gradient-to-r from-brand-primary/80 to-brand-secondary/80 text-white relative z-10 backdrop-blur-sm">
+      <section className="relative z-10 bg-gradient-to-r from-brand-primary/80 to-brand-secondary/80 py-14 text-white backdrop-blur-sm">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <Heart className="h-12 w-12 text-white mx-auto mb-6" />
-          <h2 className="text-3xl font-inter font-bold mb-6">
+          <h2 className="mb-6 text-2xl font-inter font-bold sm:text-3xl">
             ¡Gracias por Considerar Apoyarnos!
           </h2>
-          <p className="text-xl font-noto mb-8 max-w-2xl mx-auto">
+          <p className="mb-8 max-w-2xl mx-auto text-base font-noto sm:text-lg md:text-xl">
             Cada apoyo, sin importar su tamaño, nos ayuda a seguir construyendo 
             una comunidad médica más informada y conectada.
           </p>
           
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
             <Link to="/podcast">
               
             </Link>
