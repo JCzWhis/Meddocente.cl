@@ -66,6 +66,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom Brand Colors
+				brand: {
+					primary: '#1e40af', // Deep Blue
+					secondary: '#00B3B3', // Teal
+					dark: '#0f172a',    // Dark Slate
+					light: '#f8fafc',   // Slate 50
+					accent: '#4b5563',  // Slate 600
+					success: '#10b981',
+					warning: '#f59e0b',
+					error: '#ef4444',
 				}
 			},
 			borderRadius: {
