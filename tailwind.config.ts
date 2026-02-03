@@ -69,11 +69,12 @@ export default {
 				},
 				// Custom Brand Colors
 				brand: {
-					primary: '#1e40af', // Deep Blue
-					secondary: '#00B3B3', // Teal
+					primary: '#00C2CB', // Bright Turquoise/Teal from Logo (Med part + Icon)
+					secondary: '#002855', // Dark Blue from Logo (Docente part)
+					tertiary: '#0EA5E9', // Sky blue for accents/gradients
 					dark: '#0f172a',    // Dark Slate
 					light: '#f8fafc',   // Slate 50
-					accent: '#4b5563',  // Slate 600
+					accent: '#334155',  // Slate 700
 					success: '#10b981',
 					warning: '#f59e0b',
 					error: '#ef4444',

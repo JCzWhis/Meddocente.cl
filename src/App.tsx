@@ -8,6 +8,7 @@ import Podcast from "./pages/Podcast";
 import Recursos from "./pages/Recursos";
 import Apoyanos from "./pages/Apoyanos";
 import Contacto from "./pages/Contacto";
+import AvisoLegal from "./pages/AvisoLegal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/recursos" element={<Recursos />} />
           <Route path="/apoyanos" element={<Apoyanos />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

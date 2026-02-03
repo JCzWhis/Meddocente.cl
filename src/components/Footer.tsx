@@ -28,7 +28,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="mailto:contacto@meddocente.cl"
+                href="mailto:contacto@drcruz.cl"
                 className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
                 <Mail size={20} />
@@ -51,8 +51,8 @@ const Footer = () => {
             <h4 className="font-bold text-slate-900 mb-6">Información</h4>
             <ul className="space-y-3">
               <li><Link to="/contacto" className="text-slate-500 hover:text-cyan-600 transition-colors text-sm">Contacto</Link></li>
-              <li><span className="text-slate-500 text-sm cursor-not-allowed opacity-70">Aviso Legal</span></li>
-              <li><span className="text-slate-500 text-sm cursor-not-allowed opacity-70">Privacidad</span></li>
+              <li><Link to="/aviso-legal" className="text-slate-500 hover:text-cyan-600 transition-colors text-sm">Aviso Legal</Link></li>
+              <li><Link to="/aviso-legal" className="text-slate-500 hover:text-cyan-600 transition-colors text-sm">Privacidad</Link></li>
             </ul>
           </div>
 
