@@ -27,6 +27,7 @@ const Header = ({ currentPage = "" }: HeaderProps) => {
     { href: "/", label: "Inicio", id: "inicio" },
     { href: "/podcast", label: "Podcast", id: "podcast" },
     { href: "/recursos", label: "Recursos", id: "recursos" },
+    { href: "/investigacion", label: "Investigación", id: "investigacion" },
     { href: "/contacto", label: "Contacto", id: "contacto" },
   ];
 

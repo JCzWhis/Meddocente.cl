@@ -6,7 +6,9 @@
       "WebFetch(domain:open.spotify.com)",
       "Bash(npm run build:*)",
       "Bash(npm install)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(npx vite build)"
     ],
     "deny": [],
     "ask": []

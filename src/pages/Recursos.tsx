@@ -1,14 +1,71 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Lock, ArrowRight, BookOpen, Clock, Download } from "lucide-react";
+import { FileText, Lock, ArrowRight, BookOpen, Clock, Download, Search, Brain, PenTool, Database, BookMarked, ClipboardList } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+
+const categorias = [
+  {
+    titulo: "IA Generativa (LLMs)",
+    descripcion: "Los principales modelos de lenguaje para análisis, consultas clínicas y apoyo en investigación médica.",
+    icono: Brain,
+    href: "/investigacion/ia-generativa",
+    cantidad: 4,
+    tipo: "IA",
+    bgIcon: "bg-violet-100 text-violet-600",
+  },
+  {
+    titulo: "Escritura Académica con IA",
+    descripcion: "Herramientas de IA para redacción científica, citaciones automáticas y análisis de papers.",
+    icono: PenTool,
+    href: "/investigacion/escritura-academica",
+    cantidad: 2,
+    tipo: "IA",
+    bgIcon: "bg-blue-100 text-blue-600",
+  },
+  {
+    titulo: "Búsqueda y Análisis de Literatura",
+    descripcion: "Plataformas con IA para descubrir, resumir y conectar evidencia científica.",
+    icono: Search,
+    href: "/investigacion/busqueda-literatura",
+    cantidad: 4,
+    tipo: "IA",
+    bgIcon: "bg-emerald-100 text-emerald-600",
+  },
+  {
+    titulo: "Bases de Datos Médicas",
+    descripcion: "Repositorios fundamentales de literatura biomédica y evidencia clínica de acceso libre.",
+    icono: Database,
+    href: "/investigacion/bases-de-datos",
+    cantidad: 3,
+    tipo: "Clásico",
+    bgIcon: "bg-amber-100 text-amber-600",
+  },
+  {
+    titulo: "Gestión de Referencias",
+    descripcion: "Gestores bibliográficos para organizar, anotar y citar referencias en tus publicaciones.",
+    icono: BookMarked,
+    href: "/investigacion/gestion-referencias",
+    cantidad: 3,
+    tipo: "Clásico",
+    bgIcon: "bg-rose-100 text-rose-600",
+  },
+  {
+    titulo: "Revisiones Sistemáticas",
+    descripcion: "Herramientas y guías para revisiones sistemáticas y meta-análisis.",
+    icono: ClipboardList,
+    href: "/investigacion/revisiones-sistematicas",
+    cantidad: 3,
+    tipo: "Clásico",
+    bgIcon: "bg-sky-100 text-sky-600",
+  },
+];
 
 const Recursos = () => {
   return (
     <Layout currentPage="recursos">
       {/* Hero Section */}
-      <section className="bg-brand-light pt-32 pb-16 min-h-[85vh]">
+      <section className="bg-brand-light pt-32 pb-8">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <div className="bg-brand-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-brand-primary">
             <BookOpen size={32} />
@@ -16,7 +73,77 @@ const Recursos = () => {
           <h1 className="text-4xl md:text-5xl font-bold font-inter text-brand-dark mb-6">
             Recursos Clínicos
           </h1>
-          <div className="text-left mt-8">
+        </div>
+      </section>
+
+      {/* Investigación Médica Grid */}
+      <section className="bg-brand-light pb-8">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="bg-emerald-100 w-10 h-10 rounded-xl flex items-center justify-center text-emerald-600">
+              <Search size={20} />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold font-inter text-brand-dark">
+              Investigación Médica
+            </h2>
+          </div>
+          <p className="text-brand-accent font-noto mb-8 max-w-2xl leading-relaxed">
+            Herramientas de IA y recursos clásicos para potenciar tu investigación clínica.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {categorias.map((cat) => (
+              <Link key={cat.href} to={cat.href} className="group">
+                <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full bg-white">
+                  <CardContent className="p-6 flex flex-col h-full">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${cat.bgIcon}`}>
+                        <cat.icono size={24} />
+                      </div>
+                      <div className="flex gap-2">
+                        <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${cat.tipo === "IA" ? "bg-violet-100 text-violet-700" : "bg-slate-100 text-slate-600"}`}>
+                          {cat.tipo}
+                        </span>
+                        <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-secondary">
+                          {cat.cantidad} tools
+                        </span>
+                      </div>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">
+                      {cat.titulo}
+                    </h3>
+                    <p className="text-brand-accent text-sm leading-relaxed flex-1">
+                      {cat.descripcion}
+                    </p>
+
+                    <div className="mt-4 flex items-center text-sm font-semibold text-brand-secondary">
+                      Ver herramientas
+                      <div className="w-6 h-6 rounded-full bg-brand-light flex items-center justify-center ml-2 group-hover:bg-brand-primary/10 transition-colors">
+                        <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Software y Herramientas Clínicas */}
+      <section className="bg-brand-light py-8">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="bg-brand-primary/10 w-10 h-10 rounded-xl flex items-center justify-center text-brand-primary">
+              <BookOpen size={20} />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold font-inter text-brand-dark">
+              Software Médico
+            </h2>
+          </div>
+
+          <div className="text-left">
             {/* ReumaIndex Full Width Card */}
             <Card className="border-none shadow-2xl bg-white overflow-hidden group">
               <div className="flex flex-col lg:flex-row">
