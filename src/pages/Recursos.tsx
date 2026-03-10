@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Search, FileText, Lock, ArrowRight, BookOpen, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { FileText, Lock, ArrowRight, BookOpen, Clock, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
@@ -82,6 +82,46 @@ const Recursos = () => {
               </div>
             </Card>
           </div>
+
+          {/* CapiChile Card */}
+          <div className="text-left mt-8">
+            <Link to="/capichile" className="group block">
+              <Card className="border-none shadow-2xl bg-white overflow-hidden group">
+                <div className="flex flex-col lg:flex-row">
+                  {/* Visual Side */}
+                  <div className="lg:w-1/2 bg-gradient-to-br from-red-700 to-red-500 relative overflow-hidden min-h-[300px] flex items-center justify-center p-8 md:p-10">
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                    <img
+                      src="/Logo.png"
+                      alt="CapiChile"
+                      className="relative z-10 w-48 h-48 object-contain drop-shadow-2xl transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+
+                  {/* Content Side */}
+                  <CardContent className="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="px-3 py-1 bg-red-100 text-red-700 text-sm font-bold rounded-full">SOCHIRE</span>
+                      <span className="text-brand-accent/70 text-sm font-medium">Grupo de Trabajo</span>
+                    </div>
+                    <h3 className="text-3xl font-bold text-brand-dark mb-4 group-hover:text-red-600 transition-colors">
+                      CapiChile
+                    </h3>
+                    <p className="text-brand-accent text-lg mb-8 leading-relaxed">
+                      Herramienta de escritorio del Grupo de Trabajo de Capilaroscopía de la Sociedad Chilena de Reumatología. Disponible para
+                      <span className="font-semibold text-brand-secondary"> Windows</span> y <span className="font-semibold text-brand-secondary">macOS</span>.
+                    </p>
+                    <div className="mt-auto flex items-center text-base font-semibold text-red-600">
+                      <Download size={16} className="mr-2" />
+                      Descargar software <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center ml-3"><ArrowRight size={16} /></div>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </Link>
+          </div>
+
         </div>
       </section>
     </Layout>
