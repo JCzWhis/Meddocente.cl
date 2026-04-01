@@ -84,7 +84,7 @@ const CapiChile = () => {
                 <div className="w-full space-y-2 text-left text-sm text-slate-500">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={14} className="text-blue-500 shrink-0" />
-                    <span>v1.1.0 · Instalador .exe · 64-bit</span>
+                    <span>v1.1.5 · Instalador .exe · 64-bit</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={14} className="text-blue-500 shrink-0" />
@@ -92,7 +92,7 @@ const CapiChile = () => {
                   </div>
                 </div>
 
-                <a href="/downloads/CapiChile_Installer_v1.1.0.exe" download className="w-full" aria-label="Descargar para Windows">
+                <a href="/downloads/CapiChile_Installer_v1.1.5.exe" download className="w-full" aria-label="Descargar para Windows">
                   <Button
                     size="lg"
                     className="w-full h-14 text-base rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white shadow-lg shadow-blue-200 transition-all hover:shadow-blue-300"
@@ -139,6 +139,58 @@ const CapiChile = () => {
                 </a>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Previous Versions Table */}
+          <div className="mt-20 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6 font-inter">Versiones Anteriores</h3>
+            <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="bg-slate-50 border-b border-slate-200">
+                      <th className="px-6 py-4 font-bold text-slate-700">Versión</th>
+                      <th className="px-6 py-4 font-bold text-slate-700">Plataforma</th>
+                      <th className="px-6 py-4 font-bold text-slate-700">Tipo</th>
+                      <th className="px-6 py-4 text-right"></th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    <tr className="hover:bg-slate-50/50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-slate-600">v1.1.0</td>
+                      <td className="px-6 py-4 text-slate-500">Windows</td>
+                      <td className="px-6 py-4 text-slate-500">Instalador .exe</td>
+                      <td className="px-6 py-4 text-right">
+                        <a 
+                          href="/downloads/CapiChile_Installer_v1.1.0.exe" 
+                          download 
+                          className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                        >
+                          Descargar <Download size={14} className="ml-1.5" />
+                        </a>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-slate-600">v1.1.0</td>
+                      <td className="px-6 py-4 text-slate-500">macOS</td>
+                      <td className="px-6 py-4 text-slate-500">Imagen .dmg</td>
+                      <td className="px-6 py-4 text-right">
+                        <a 
+                          href="/downloads/CapiChile_1.1.0.dmg" 
+                          download 
+                          className="inline-flex items-center text-slate-600 font-semibold hover:text-slate-700 transition-colors"
+                        >
+                          Descargar <Download size={14} className="ml-1.5" />
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="mt-4 text-slate-400 text-xs text-center italic">
+              Se recomienda utilizar siempre la última versión disponible para obtener las mejores funcionalidades y corrección de errores.
+            </p>
           </div>
 
           {/* Footer note */}
