@@ -120,7 +120,7 @@ const CapiChile = () => {
                 <div className="w-full space-y-2 text-left text-sm text-slate-500">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={14} className="text-slate-500 shrink-0" />
-                    <span>v1.1.0 · Instalador .dmg · Apple Silicon & Intel</span>
+                    <span>v1.1.5 · Instalador .dmg · Apple Silicon & Intel</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={14} className="text-slate-500 shrink-0" />
@@ -128,7 +128,7 @@ const CapiChile = () => {
                   </div>
                 </div>
 
-                <a href="/downloads/CapiChile_1.1.0.dmg" download className="w-full" aria-label="Descargar para macOS">
+                <a href="/downloads/CapiChile_1.1.5.dmg" download className="w-full" aria-label="Descargar para macOS">
                   <Button
                     size="lg"
                     className="w-full h-14 text-base rounded-xl bg-gradient-to-r from-slate-700 to-slate-500 hover:from-slate-800 hover:to-slate-600 text-white shadow-lg shadow-slate-200 transition-all hover:shadow-slate-300"
