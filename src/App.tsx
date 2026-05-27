@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { initGoogleAnalytics, trackPageView } from "./analytics";
 import Index from "./pages/Index";
 import Podcast from "./pages/Podcast";
 import Recursos from "./pages/Recursos";
@@ -19,34 +21,52 @@ import BasesDeDatos from "./pages/investigacion/BasesDeDatos";
 import GestionReferencias from "./pages/investigacion/GestionReferencias";
 import RevisionesSistematicas from "./pages/investigacion/RevisionesSistematicas";
 
+// Analytics tracker component
+const AnalyticsTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location]);
+
+  return null;
+};
+
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/podcast" element={<Podcast />} />
-          <Route path="/recursos" element={<Recursos />} />
-          <Route path="/apoyanos" element={<Apoyanos />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/aviso-legal" element={<AvisoLegal />} />
-          <Route path="/capichile" element={<CapiChile />} />
-          <Route path="/investigacion" element={<Investigacion />} />
-          <Route path="/investigacion/ia-generativa" element={<IAGenerativa />} />
-          <Route path="/investigacion/escritura-academica" element={<EscrituraAcademica />} />
-          <Route path="/investigacion/busqueda-literatura" element={<BusquedaLiteratura />} />
-          <Route path="/investigacion/bases-de-datos" element={<BasesDeDatos />} />
-          <Route path="/investigacion/gestion-referencias" element={<GestionReferencias />} />
-          <Route path="/investigacion/revisiones-sistematicas" element={<RevisionesSistematicas />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    initGoogleAnalytics();
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <AnalyticsTracker />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/podcast" element={<Podcast />} />
+            <Route path="/recursos" element={<Recursos />} />
+            <Route path="/apoyanos" element={<Apoyanos />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/aviso-legal" element={<AvisoLegal />} />
+            <Route path="/capichile" element={<CapiChile />} />
+            <Route path="/investigacion" element={<Investigacion />} />
+            <Route path="/investigacion/ia-generativa" element={<IAGenerativa />} />
+            <Route path="/investigacion/escritura-academica" element={<EscrituraAcademica />} />
+            <Route path="/investigacion/busqueda-literatura" element={<BusquedaLiteratura />} />
+            <Route path="/investigacion/bases-de-datos" element={<BasesDeDatos />} />
+            <Route path="/investigacion/gestion-referencias" element={<GestionReferencias />} />
+            <Route path="/investigacion/revisiones-sistematicas" element={<RevisionesSistematicas />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
