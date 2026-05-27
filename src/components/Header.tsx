@@ -46,12 +46,12 @@ const Header = ({ currentPage = "" }: HeaderProps) => {
             onClick={() => setIsMenuOpen(false)}
           >
             <img
-              src="/logo_small.png"
-              alt="MedDocente Logo"
+              src="/app_icon.png"
+              alt="ReumaIndex Logo"
               className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
             />
             <span className={`text-xl font-bold font-inter tracking-tight ${isScrolled ? 'text-slate-800' : 'text-slate-900'}`}>
-              MedDocente<span className="text-cyan-600">.cl</span>
+              ReumaIndex
             </span>
           </Link>
 

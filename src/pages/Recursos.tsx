@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Lock, ArrowRight, BookOpen, Clock, Download } from "lucide-react";
+import { FileText, Lock, ArrowRight, BookOpen, Clock, Download, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
@@ -52,9 +52,9 @@ const Recursos = () => {
                   </div>
 
                   {/* Badge */}
-                  <div className="absolute top-6 left-6 bg-white text-brand-secondary text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                    <Clock size={12} className="text-orange-500 animate-pulse" />
-                    PRÓXIMAMENTE
+                  <div className="absolute top-6 left-6 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                    <CheckCircle2 size={12} />
+                    DISPONIBLE
                   </div>
                 </div>
 
@@ -64,9 +64,7 @@ const Recursos = () => {
                     ReumaIndex App
                   </h3>
                   <p className="text-brand-accent text-lg mb-8 leading-relaxed">
-                    La aplicación móvil definitiva para el reumatólogo moderno. Accede rápidamente a calculadoras validadas de
-                    <span className="font-semibold text-brand-secondary"> DAS28, SDAI, CDAI</span> y criterios de clasificación <span className="font-semibold text-brand-secondary">ACR/EULAR</span> directamente desde tu bolsillo.
-                    <br /><span className="text-sm text-brand-accent/70 mt-2 block">Más información en <span className="font-medium text-brand-primary">Reumaindex.com</span></span>
+                    La aplicación móvil definitiva para el reumatólogo moderno. <strong>50 calculadoras</strong>, <strong>24 criterios EULAR/ACR</strong>, <strong>9 paneles de anticuerpos</strong> (50+ patrones) y <strong>62 fármacos</strong> con dosificación. Todo offline y sin cloud.
                   </p>
 
                   <div className="grid sm:grid-cols-2 gap-6 mb-10">
@@ -75,8 +73,8 @@ const Recursos = () => {
                         <FileText size={20} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-brand-dark text-sm">Criterios Completos</h4>
-                        <p className="text-xs text-brand-accent/70 mt-1">Lupus, Artritis, Vasculitis y más.</p>
+                        <h4 className="font-bold text-brand-dark text-sm">50 Calculadoras</h4>
+                        <p className="text-xs text-brand-accent/70 mt-1">Scores de actividad validados.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -85,16 +83,20 @@ const Recursos = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-brand-dark text-sm">100% Offline</h4>
-                        <p className="text-xs text-brand-accent/70 mt-1">Tu práctica no se detiene.</p>
+                        <p className="text-xs text-brand-accent/70 mt-1">Sin conexión a internet.</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-col xl:flex-row items-center gap-4 mt-auto border-t border-brand-accent/10 pt-8">
-                    <span className="text-brand-accent/60 text-sm font-semibold uppercase tracking-wider mr-auto xl:mr-4">Disponible pronto en:</span>
-                    <div className="flex flex-wrap gap-4 opacity-50 grayscale cursor-not-allowed">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-10" />
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-10" />
+                    <span className="text-brand-accent/60 text-sm font-semibold uppercase tracking-wider mr-auto xl:mr-4">Descargar ahora:</span>
+                    <div className="flex flex-wrap gap-4">
+                      <a href="https://play.google.com/store/apps/details?id=com.reumaindex.app" target="_blank" rel="noreferrer" className="hover:opacity-80 transition-opacity">
+                        <img src="/google-play-badge.svg" alt="Google Play" className="h-10" />
+                      </a>
+                      <a href="https://apps.apple.com/cl/app/reumaindex/id1234567890" target="_blank" rel="noreferrer" className="hover:opacity-80 transition-opacity">
+                        <img src="/app-store-badge.svg" alt="App Store" className="h-10" />
+                      </a>
                     </div>
                   </div>
                 </CardContent>

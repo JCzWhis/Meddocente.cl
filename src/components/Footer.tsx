@@ -10,13 +10,13 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/logo_small.png" alt="MedDocente Logo" className="h-8 w-8 object-contain" />
+              <img src="/app_icon.png" alt="ReumaIndex Logo" className="h-8 w-8 object-contain" />
               <span className="text-xl font-bold text-slate-900">
-                MedDocente<span className="text-cyan-600">.cl</span>
+                ReumaIndex
               </span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed">
-              Educación médica de vanguardia potenciada por inteligencia artificial y validada por especialistas clínicos.
+              Herramientas clínicas integrales para reumatólogos. Desarrollado por MedDocenteIA.
             </p>
             <div className="flex gap-4 pt-2">
               <a
@@ -71,7 +71,7 @@ const Footer = () => {
 
         <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} MedDocente.cl. Todos los derechos reservados.
+            © {new Date().getFullYear()} ReumaIndex. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-1 text-xs text-slate-400">
             <span>Hecho en Chile 🇨🇱</span>
