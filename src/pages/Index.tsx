@@ -250,7 +250,7 @@ const Index = () => {
               Ecosistema de Herramientas Médicas
             </h2>
             <p className="text-slate-600 text-lg">
-              ReumaIndex es solo el comienzo. Accede a recursos educativos, investigación y software desarrollados por MedDocenteIA.
+              ReumaIndex es solo el comienzo. Accede a recursos educativos, investigación y software desarrollados por el Dr. Cruz.
             </p>
           </div>
 

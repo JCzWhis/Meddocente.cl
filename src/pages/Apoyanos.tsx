@@ -17,13 +17,13 @@ const Apoyanos = () => {
             Apoya Nuestro Proyecto
           </h1>
           <p className="text-xl text-slate-600 mb-10 leading-relaxed">
-            MedDocente es 100% gratuito y libre de publicidad invasiva.
+            ReumaIndex es 100% gratuito y libre de publicidad invasiva.
             Tu aporte nos ayuda a mantener los servidores, pagar las herramientas de IA y seguir produciendo contenido de calidad.
           </p>
 
           <Button
             size="lg"
-            onClick={() => window.open('https://buymeacoffee.com/meddocente', '_blank')}
+            onClick={() => window.open('https://buymeacoffee.com/reumaindex', '_blank')}
             className="bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-slate-900 text-lg font-bold px-10 py-6 rounded-xl shadow-lg shadow-orange-500/20 transform hover:-translate-y-1 transition-all"
           >
             <Coffee className="mr-2.5 h-6 w-6" />
@@ -50,8 +50,8 @@ const Apoyanos = () => {
                 <Button variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-100 w-full" onClick={() => {
                   if (navigator.share) {
                     navigator.share({
-                      title: 'MedDocente.cl',
-                      text: 'Educación médica con IA',
+                      title: 'ReumaIndex',
+                      text: 'Herramientas clínicas para reumatólogos',
                       url: window.location.origin
                     })
                   }
